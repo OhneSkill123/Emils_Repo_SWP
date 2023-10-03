@@ -24,4 +24,5 @@ function abc() {
             clearInterval(avs);
         }
     }, 400);
+    
 }
