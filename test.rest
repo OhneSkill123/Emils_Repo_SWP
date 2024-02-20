@@ -1,8 +1,10 @@
-
-
-
+###
 GET http://localhost:3000/movie/2102
 
+###
+GET http://localhost:3000/movies
+
+###
 POST http://localhost:3000/movie
 Content-Type: application/json
 
@@ -13,7 +15,7 @@ Content-Type: application/json
   "director": "Eigenproduktion: E.H",
   "genreId": 1
 }
-
+###
 PUT http://localhost:3000/movie/2102
 Content-Type: application/json
 
