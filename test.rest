@@ -1,0 +1,22 @@
+
+
+
+GET http://localhost:3000/movie/2102
+
+POST http://localhost:3000/movie
+Content-Type: application/json
+
+{
+  "title": "Emill krank zuhause",
+  "length": 187,
+  "description": "Ein Aufregendes Abenteuer mit Emil der gelangweilt zuhause krank ist",
+  "director": "Eigenproduktion: E.H",
+  "genreId": 1
+}
+
+PUT http://localhost:3000/movie/2102
+Content-Type: application/json
+
+{
+  "title": "test"
+}
