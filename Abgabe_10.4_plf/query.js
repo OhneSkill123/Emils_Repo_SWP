@@ -34,7 +34,7 @@ async function getMitarbeiterInZoo(zooId) {
   });
 }
 
-// Call the functions
+
 getAllZoos().then(console.log);
 
 getRandomZoo().then(randomZoo => {
