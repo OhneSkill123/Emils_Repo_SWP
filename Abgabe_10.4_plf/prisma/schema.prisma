@@ -8,36 +8,33 @@ generator client {
 }
 
 model Zoo {
-    cuid Int @id @default(autoincrement())
-    Stadt String
-    Land String
-    Adresse String
-    baujahr DateTime
+    id           String      @id @default(cuid())
+    Stadt        String
+    Land         String
+    Adresse      String
+    baujahr      DateTime
     MAbteilungen Abteilung[]
-
 }
 
-model Abteilung{
-    cuid Int @id @default(autoincrement())
-    zoo Zoo @relation(fields: [ZooId], references: [cuid])
-    Name String
+model Abteilung {
+    id           String        @id @default(cuid())
+    zoo          Zoo           @relation(fields: [ZooId], references: [id])
+    Name         String
     MMitarbeiter Mitarbeiter[]
-    MTiere Tier[]
-    ZooId Int
+    MTiere       Tier[]
+    ZooId        String
 }
 
-model Tier{
-    cuid Int @id @default(autoincrement())
-    Art String
-    Name String
-    EineAbteilung Abteilung @relation(fields: [AbteilungsId], references: [cuid])
-    AbteilungsId Int
+model Tier {
+    id            String    @id @default(cuid())
+    Art           String
+    Name          String
+    EineAbteilung Abteilung @relation(fields: [AbteilungsId], references: [id])
+    AbteilungsId  String
 }
 
 model Mitarbeiter {
-    
-    cuid Int @id @default(autoincrement())
-    name String
+    id          String      @id @default(cuid())
+    name        String
     Abteilungen Abteilung[]
-
 }
