@@ -1,0 +1,18 @@
+<h3>Animals</h3>
+<button onclick="location.href='/'">Go to Home Page</button>
+<% animals.forEach(animal=> { %>
+    <p>Name: <%= animal.name %>
+    </p>
+    <form action="/zoo/:id/abteilungen/:abteilungId/tiere/<%= animal.id %>" method="post">
+        <input type="text" name="newName" placeholder="New name">
+        <input type="checkbox" name="isDead" value="true"> Is the animal dead?
+        <input type="submit" value="Update">
+    </form>
+    <% }) %>
+
+        <h3>Responsible Employees</h3>
+        <% employees.forEach(employee=> { %>
+            <p>Name: <%= employee.name %>
+            </p>
+            <% }) %>
+

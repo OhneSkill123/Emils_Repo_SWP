@@ -1,0 +1,18 @@
+<% zoo.abteilungen.forEach(abteilung=> { %>
+    <p></p>
+    <h2 style="font-size: 24px; color: red;">Tierabteilung:</h2> <u style="font-size: 24px; color: rgb(17, 255, 29);"><%= abteilung.name %></u>
+    
+    <h4>Tiere</h4>
+    <% abteilung.tiere.forEach(tier=> { %>
+        <p>Name: <%= tier.name %></p>
+    <% }) %>
+    
+    <a href="/zoo/<%= zoo.id %>/abteilungen/<%= abteilung.id %>/tiere">See all animals</a>
+
+    <h4>Mitarbeiter</h4>
+    <% abteilung.mitarbeiter.forEach(mitarbeiter=> { %>
+        <p>Name: <%= mitarbeiter.name %></p>
+    <% }) %>
+    
+    <a href="/zoo/<%= zoo.id %>/abteilungen/<%= abteilung.id %>/mitarbeiter">See all employees</a>
+<% }) %>

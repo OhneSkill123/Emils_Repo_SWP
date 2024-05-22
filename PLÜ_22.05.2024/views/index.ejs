@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <title>Emils super Zoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Meine Zoos (Emil)</h2>
+    <ul>
+        <% zoos.forEach(e=> { %>
+            <li data-id="<%= e.id %>">
+                <a href="/zoo/<%= e.id %>" hx-get="/zoo/<%= e.id %>" hx-target="#details">
+                    <%= `Land: ${e.land} Stadt: ${e.stadt} Adresse: ${e.adresse} (${e.baujahr})`%>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+    <h3>Details:</h3>
+    <ul id="details">No Zoo selected yet</ul>
+</body>
+
+</html>
