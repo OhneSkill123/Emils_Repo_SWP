@@ -1,0 +1,19 @@
+GET http://localhost:1234/beispieleJSON/unsolvedSudoku1
+
+###
+GET http://localhost:1234/beispieleJSON/unsolvedSudoku2
+
+###
+GET http://localhost:1234/beispieleJSON/unsolvedSudoku3
+
+###
+GET http://localhost:1234/index.html
+
+###
+
+POST http://localhost:1234/solve-sudoku
+Content-Type: application/json
+
+{
+    "fileName": "unsolvedSudoku5.json.json"
+}
